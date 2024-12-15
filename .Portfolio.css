@@ -1,0 +1,99 @@
+html, body {
+  background-color: #e4e0e0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  background-color: #e4e0e0;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+header h2 {
+  margin-top: -18px;
+  background-color: white;
+}
+
+header h2 img {
+  display: block;
+  margin: 0 auto;
+  width: 124px;
+  height: 175px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+nav ul {
+  margin-bottom: 20px;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  font-size: 22px;
+  position: relative;
+  padding: 5px 15px; /* Kis margó a szöveg és a vonal között */
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  right: -15px; /* Középre igazítás a szöveg és a térköz között */
+  top: 25%; /* A vonal kezdete */
+  bottom: 25%; /* A vonal vége */
+  width: 1px;
+  background-color: #000;
+}
+
+nav ul li:last-child::after {
+  display: none; /* Az utolsó elem után ne jelenjen meg vonal */
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: auto;
+  text-align: center;
+  padding: 5px;
+  background-color: #cecdcd;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Slide alapbeállítások */
+/* .slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: slideAnimation 12s infinite;
+} */
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+
+@keyframes slideAnimation {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+.fade {
+  transition: opacity 1s ease-in-out;
+}
